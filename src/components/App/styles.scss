@@ -1,0 +1,25 @@
+@import "reset-css/reset.css";
+@import "../../config/_variables";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+html, body {
+    background-color: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    width: 100%; height: 100%;
+    margin: 0; padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+/* reset */
+body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,table,tr,th,td,form,fieldset,legend,label,input,select,textarea,button {margin:0; padding:0;}
+h2,h3,h4,h5,h6 {font-size:12px; font-family:"Regular","ë‹ì›€",dotum,sans-serif;}
+a {text-decoration:none; color:#333;}
+ul,li {list-style:none;}
+img,fieldset {border:none; vertical-align: middle;}
+strong,em,address {font-weight:normal; font-style:normal;}
+table {border-collapse:collapse;}
+button{border: none; background: none;}

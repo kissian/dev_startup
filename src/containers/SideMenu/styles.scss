@@ -1,0 +1,8 @@
+@import "../../config/_variables";
+
+.side-menu {
+  width: 100%; padding: $all-container; box-sizing: border-box;
+  float: left;
+  min-height: 800px; border-right: 1px solid #eee;
+
+}
