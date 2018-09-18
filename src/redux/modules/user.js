@@ -54,7 +54,7 @@ function usernameLogin(email, password) {
  */
 function createAccount(email, password, firstName, lastName) {
   return dispatch => {
-    fetch("/api/account/signup", {
+    fetch("/dev_startup/account/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
