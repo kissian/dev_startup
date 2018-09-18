@@ -9,10 +9,14 @@ const UserSeesionSchema = new mongoose.Schema({
     type: Date,
     default: Date.now()
   },
+  firstName: {
+    type: String,
+    default: '',
+  },
   isDeleted: {
     type: Boolean,
     default: false
-  },
+  }
 });
 
 module.exports = mongoose.model('UserSession', UserSeesionSchema);

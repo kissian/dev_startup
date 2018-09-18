@@ -46,12 +46,12 @@ module.exports = (app) => {
       if(err) {
         return res.send({
           success: false,
-          message: "Error: Server error"
+          error: "Error: Server error"
         });
       } else if(prevUsers.length > 0) {
         return res.send({
           success: false,
-          message: "Error: Account already exist."
+          error: "Error: Account already exist."
         });
       }
 
@@ -66,12 +66,12 @@ module.exports = (app) => {
         if(err) {
           return res.send({
             success: false,
-            message: "Error: Server error"
+            error: "Error: Server error"
           });
         }
         return res.send({
           success: true,
-          message: "Signed up"
+          message: "Signed up!! 가입했니?"
         });
       })
     });
@@ -92,13 +92,13 @@ module.exports = (app) => {
     if(!email) {
       return res.send({
         success: false,
-        message: "Error email connot be blank."
+        error: "Error email connot be blank."
       });
     };
     if(!password) {
       return res.send({
         success: false,
-        message: "Error password connot be blank."
+        error: "Error password connot be blank."
       });
     };
 
@@ -110,13 +110,13 @@ module.exports = (app) => {
       if(err) {
         return res.send({
           success: false,
-          message: "server error"
+          error: "server error"
         });
       };
       if(users.length != 1) {
         return res.send({
           success: false,
-          message: "user invialid 1"
+          error: "user invialid 1"
         });
       };
 
@@ -124,7 +124,7 @@ module.exports = (app) => {
       if(!user.validPassword(password)) {
         return res.send({
           success: false,
-          message: "user invialid 2"
+          error: "user invialid 2"
         });
       };
 
@@ -135,7 +135,7 @@ module.exports = (app) => {
         if(err) {
           return res.send({
             success: false,
-            message: "server error"
+            error: "server error"
           })
         }
         return res.send({
@@ -160,18 +160,18 @@ module.exports = (app) => {
       if(err) {
         return res.send({
           success: false,
-          message: "not get user token"
+          error: "not get user token"
         })
       }
       if(session.length != 1) {
         return res.send({
           success: false,
-          message: "not get session"
+          error: "not get session"
         })
       } else {
         return res.send({
           success: true,
-          message: "🍼 Good!!!"
+          error: "🍼 Good!!!"
         })
       }
     })
@@ -193,7 +193,7 @@ module.exports = (app) => {
       if(err) {
         return res.send({
           success: false,
-          message: "not get user token"
+          error: "not get user token"
         })
       }
       return res.send({

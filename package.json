@@ -2,10 +2,8 @@
   "name": "osiagram",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kissian.github.io/dev_startup",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
-    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
-    "@fortawesome/react-fontawesome": "^0.1.0-11",
     "autoprefixer": "7.1.6",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -30,6 +28,7 @@
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
+    "gh-pages": "^2.0.0",
     "history": "^4.7.2",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
@@ -72,7 +71,9 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "start:dev": "node scripts/build.js && node server/main.js"
+    "build": "node scripts/build.js",
+    "start:dev": "node scripts/build.js && node server/main.js",
+    "deploy": "node scripts/build.js&&gh-pages -d build"
   },
   "babel": {
     "presets": [

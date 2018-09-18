@@ -11,7 +11,7 @@ const config = require('./config/config');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const devPort = 8080;
+const devPort = "https://kissian.github.io/dev_startup/";
 
 const db = mongoose.connection;
 app.use(morgan('dev'));

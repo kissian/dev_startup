@@ -18,7 +18,7 @@ class Container extends Component {
         const { handleToggleClick } = this;
         const { isToggleOn } = this.state;
         const { user: { isLoggedIn }, logout } = this.props;
-
+        console.log(this.props.user);
         return (
             <Navigation 
                 toggle={handleToggleClick}
