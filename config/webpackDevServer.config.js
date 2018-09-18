@@ -81,7 +81,7 @@ module.exports = function(proxy, allowedHost) {
     },
     public: allowedHost,
     proxy: {
-      "**": "http://localhost:3000" // express 서버주소 ians
+      "**": "http://localhost:3000" // express 서버주소 iansghr
     },
     before(app) {
       // This lets us open files from the runtime error overlay.

@@ -3,22 +3,29 @@ const path = require('path');
 
 const morgan = require('morgan'); // HTTP REQUEST LOGGER
 const bodyParser = require('body-parser'); // PARSE HTML BODY
+// proxy
+const proxy = require('http-proxy-middleware');
+
 
 const mongoose = require('mongoose');
 const session = require('express-session');
 
 const config = require('./config/config');
+const proxyOption = require('./config/proxy');
 
 const app = express();
 const port = process.env.PORT || 3000;
 // const port = "https://kissian.github.io/dev_startup/" || 3000;
 const devPort = 8080;
 
-console.log(process.env.PORT);
+console.log('PORT', process.env.PORT);
+console.log('NODE_ENV', process.env.NODE_ENV);
+
 
 const db = mongoose.connection;
 app.use(morgan('dev'));
 
+var exampleProxy = proxy(proxyOption);
 
 /* use session */
 app.use(session({
@@ -27,7 +34,8 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use('/', express.static(path.join(__dirname, './../build')));
+// app.use('/', express.static(path.join(__dirname, './../build')));
+app.use('/', proxyOption);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
