@@ -12,7 +12,7 @@ import MainLayout from 'layouts/MainLayout';
 // import EventLayout from 'layouts/EventLayout';
 
 class Root extends Component {
-
+  
   renderLoggedInRouter() {
     return (
           <Switch>

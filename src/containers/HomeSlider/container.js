@@ -6,7 +6,7 @@ class Container extends Component {
     super(props);
     this.state = {
       properties: [],
-      property: []
+      property: [],
     }
   }
   componentWillMount() {
