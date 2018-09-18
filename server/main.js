@@ -10,8 +10,8 @@ const session = require('express-session');
 const config = require('./config/config');
 
 const app = express();
-// const port = process.env.PORT || 3000;
-const port = "https://kissian.github.io/dev_startup/" || 3000;
+const port = process.env.PORT || 3000;
+// const port = "https://kissian.github.io/dev_startup/" || 3000;
 const devPort = 8080;
 
 console.log(process.env.PORT);
