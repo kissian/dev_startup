@@ -36,7 +36,7 @@ module.exports = {
   entry: [
     // We ship a few polyfills by default:
     require.resolve("./polyfills"),
-    'webpack-dev-server/client?http://0.0.0.0:3000', // 개발서버의 포트가 이 부분에 입력되어야 제대로 작동합니다 ians
+    // 'webpack-dev-server/client?http://0.0.0.0:3000', // 개발서버의 포트가 이 부분에 입력되어야 제대로 작동합니다 ians
     // Include an alternative client for WebpackDevServer. A client's job is to
     // connect to WebpackDevServer by a socket and get notified about changes.
     // When you save a file, the client will either apply hot updates (in case

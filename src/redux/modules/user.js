@@ -5,18 +5,18 @@ const SAVE_TOKEN = "SAVE_TOKEN";
 const LOGOUT = "LOGOUT";
 
 // action creators
-function saveToken(token) {
-  return {
-    type: SAVE_TOKEN,
-    token
-  };
-}
+// function saveToken(token) {
+//   return {
+//     type: SAVE_TOKEN,
+//     token
+//   };
+// }
 
-function logout() {
-  return {
-    type: LOGOUT
-  };
-}
+// function logout() {
+//   return {
+//     type: LOGOUT
+//   };
+// }
 
 // API actions
 /*
@@ -25,53 +25,53 @@ function logout() {
 	"firstName": "aaa",
 	"lastName": "asdasd"
  */
-function usernameLogin(email, password) {
-  return dispatch => {
-    fetch("/api/account/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        email,
-        password
-      })
-    })
-      .then(response => response.json())
-      .then(json => {
-        if (json.token) {
-          dispatch(saveToken(json.token));
-        }
-      })
-      .catch(err => console.log(err));
-  };
-}
+// function usernameLogin(email, password) {
+//   return dispatch => {
+//     fetch("/api/account/login", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         email,
+//         password
+//       })
+//     })
+//       .then(response => response.json())
+//       .then(json => {
+//         if (json.token) {
+//           dispatch(saveToken(json.token));
+//         }
+//       })
+//       .catch(err => console.log(err));
+//   };
+// }
 /*
   "email": "kinsin@okokpp.io",
 	"password": "Test",
 	"firstName": "aaa",
 	"lastName": "asdasd"
  */
-function createAccount(email, password, firstName, lastName) {
-  return dispatch => {
-    fetch("/dev_startup/account/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        email, password, firstName, lastName
-      })
-    })
-      .then(response => response.json())
-      .then(json => {
-        if (json.token) {
-          dispatch(saveToken(json.token));
-        }
-      })
-      .catch(err => console.log(err));
-  };
-}
+// function createAccount(email, password, firstName, lastName) {
+//   return dispatch => {
+//     fetch("/dev_startup/account/signup", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         email, password, firstName, lastName
+//       })
+//     })
+//       .then(response => response.json())
+//       .then(json => {
+//         if (json.token) {
+//           dispatch(saveToken(json.token));
+//         }
+//       })
+//       .catch(err => console.log(err));
+//   };
+// }
 
 // function logout() {
 //   return dispatch => {
@@ -90,8 +90,9 @@ function createAccount(email, password, firstName, lastName) {
 // initial state
 
 const initialState = {
-  isLoggedIn: localStorage.getItem("jwt") ? true : false,
-  token: localStorage.getItem("jwt")
+  // isLoggedIn: localStorage.getItem("jwt") ? true : false,
+  // token: localStorage.getItem("jwt")
+  isLoggedIn: true
 };
 
 // reducer
@@ -129,9 +130,9 @@ function applyLogout(state, action) {
 // exports
 
 const actionCreators = {
-  usernameLogin,
-  createAccount,
-  logout,
+  // usernameLogin,
+  // createAccount,
+  // logout,
 };
 
 export { actionCreators };

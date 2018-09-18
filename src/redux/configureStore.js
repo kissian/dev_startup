@@ -5,6 +5,7 @@ import createHistory from "history/createBrowserHistory";
 import thunk from "redux-thunk";
 import user from "redux/modules/user";
 import boards from 'redux/modules/boards';
+import cards from 'redux/modules/cards';
 import { i18nState } from "redux-i18n";
 
 const env = process.env.NODE_ENV;
@@ -21,6 +22,7 @@ if (env === "development") {
 const reducer = combineReducers({
   user,
   boards,
+  cards,
   routing: routerReducer,
   i18nState
 });

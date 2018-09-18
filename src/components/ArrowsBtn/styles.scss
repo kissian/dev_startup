@@ -1,0 +1,24 @@
+.arrorBtnWrap {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  z-index: 10;
+  .nextArrow {
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    width: 40px;
+    img{
+      width: 100%;
+    }
+  }
+  .backArrow {
+    cursor: pointer;
+    float: left;
+    margin-left: 20px;
+    width: 40px;
+    img{
+      width: 100%;
+    }
+  }
+}

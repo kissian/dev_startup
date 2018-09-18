@@ -9,7 +9,7 @@ import Footer from 'containers/Footer';
 /* Route */
 import Main from 'layouts/Main';
 
-import Auth from '../Auth';
+// import Auth from '../Auth';
 
 const App = props => [
   <Navigation key={1} />,
@@ -29,7 +29,7 @@ const PrivateRoutes = props => (
 
 const PublicRoutes = props => (
   <Switch>
-    <Route exact path="/" render={() => <Auth />}/>
+    {/* <Route exact path="/" render={() => <Auth />}/> */}
     <Route path="/recover" render={() => "recover password"} />
   </Switch>
 );

@@ -55,11 +55,11 @@ const NaviToggle = ({
         }
     </li>
 
-    <li className={styles.list}>
+    {/* <li className={styles.list}>
         <Link to="/" onClick={logout}>
             LOGOUT
         </Link>
-    </li>
+    </li> */}
   </ul>
 )
 

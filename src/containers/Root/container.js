@@ -31,14 +31,14 @@ class Root extends Component {
   renderLoggedOutRouter() {
     return (
           <Switch>
-              <Route path="/" component={LoginLayout} />
+              {/* <Route path="/" component={LoginLayout} /> */}
+              <Route path="/" render={() => "test login true"} />
           </Switch>
     );
   }
 
   render() {
     const { user: { isLoggedIn } } = this.props;
-    console.log(isLoggedIn, process.env);
     return (
       <Router>
         {!isLoggedIn ? this.renderLoggedOutRouter() : this.renderLoggedInRouter()}

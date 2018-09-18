@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import SimpleNavbar from 'containers/Navigation';
 import Footer from 'containers/Footer';
+import HomeSlider from 'containers/HomeSlider';
 
 class MainLayout extends Component {
   render() {
@@ -8,7 +9,7 @@ class MainLayout extends Component {
       <Fragment>
         <SimpleNavbar />
         <div>
-          MainLayout
+          <HomeSlider />
         </div>
         <Footer />
       </Fragment>
