@@ -31,16 +31,16 @@ class Navigation extends Component {
                                 Logout
                             </MenuItem>
                         </NavDropdown>
-                        <NavItem href="/blog">
+                        <NavItem href="/kissianPopol/blog">
                             <div className="fas fa-th-large"></div>
                         </NavItem>
-                        <NavItem href="/memo">
+                        <NavItem href="/kissianPopol/memo">
                             <div className="fab fa-flipboard"></div>
                         </NavItem>
-                        <NavItem href="/messages">
+                        <NavItem href="/kissianPopol/messages">
                             <div className="fas fa-comment-alt" />
                         </NavItem>
-                        <NavItem href="/bell">
+                        <NavItem href="/kissianPopol/bell">
                             <div className="fas fa-bell" />
                         </NavItem>
                     </Nav>

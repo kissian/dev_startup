@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './styles.scss';
 const Logo = props => (
   <div className={styles.logo}>
-    <Link to="/">
+    <Link to="/kissianPopol">
         STENCIL WOW
     </Link>
   </div>

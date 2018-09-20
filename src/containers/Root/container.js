@@ -23,8 +23,8 @@ class Root extends Component {
               <Route path="/messages" component={MessageLayout} />
               <Route path="/profile/:tabName" component={ProfileLayout} />
               <Route path="/profile" component={ProfileLayout} /> */}
-              <Route path="/bell" component={BellLayout} />
-              <Route path="/" component={MainLayout} />
+              <Route path="/kissianPopol/bell" component={BellLayout} />
+              <Route path="/kissianPopol" component={MainLayout} />
           </Switch>
     );
   }
