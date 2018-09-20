@@ -1,0 +1,11 @@
+.addCommit {
+  .timelineBox {
+    border: 1px solid #eee;
+    padding: 15px;
+    box-sizing: border-box;
+    textarea {
+      border: none; margin-bottom: 30px;
+      border-bottom: 1px solid #eee; height: 100px; box-shadow: none;
+    }
+  }
+}

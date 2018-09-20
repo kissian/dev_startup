@@ -1,9 +1,5 @@
-header {
-  width: 100%; border-bottom: 1px solid #eee;
-  .header-nav {
-    width: 78%; margin: 0 auto;
-    height: 54px;
-    box-sizing: border-box;
-    background-color: #fff;
-  }
+.navbar {
+  border: none;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
 }

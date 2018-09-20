@@ -10,7 +10,7 @@ const HomeSlider = ({
   goToNextSlide,
   goToPrevSlide
 }) => (
-  <div className={styles.containerWrap}>
+  <div className={styles.row}>
     <div className={styles.cardPage}>
       <div className={styles.col}>
         <div className={`${styles.cardsSlider} ${styles.activeSlide}${property.index}`}>

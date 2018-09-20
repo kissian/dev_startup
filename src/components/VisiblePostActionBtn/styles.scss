@@ -1,0 +1,9 @@
+.bordBody {
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+  .btn-group.actionBtnGroup {
+    button.actionBtn {
+      border: 0 !important;
+    }
+  }
+}

@@ -92,7 +92,13 @@ const LOGOUT = "LOGOUT";
 const initialState = {
   // isLoggedIn: localStorage.getItem("jwt") ? true : false,
   // token: localStorage.getItem("jwt")
-  isLoggedIn: true
+  isLoggedIn: true,
+  _id: "593e9297df21e62e0465f91f",
+  name: "kissian",
+  profile: {
+    nickname: "kissian",
+    profileImage: "/assets/img/kissian.jpg"
+  }
 };
 
 // reducer

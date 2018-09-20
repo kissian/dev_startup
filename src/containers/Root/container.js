@@ -9,7 +9,7 @@ import LoginLayout from 'layouts/LoginLayout';
 import MainLayout from 'layouts/MainLayout';
 // import ProfileLayout from 'layouts/ProfileLayout';
 // import MessageLayout from 'layouts/MessageLayout';
-// import EventLayout from 'layouts/EventLayout';
+import BellLayout from 'layouts/BellLayout';
 
 class Root extends Component {
   
@@ -22,8 +22,8 @@ class Root extends Component {
               <Route path="/messages/:id" component={MessageLayout} />
               <Route path="/messages" component={MessageLayout} />
               <Route path="/profile/:tabName" component={ProfileLayout} />
-              <Route path="/profile" component={ProfileLayout} />
-              <Route path="/event" component={EventLayout} /> */}
+              <Route path="/profile" component={ProfileLayout} /> */}
+              <Route path="/bell" component={BellLayout} />
               <Route path="/" component={MainLayout} />
           </Switch>
     );

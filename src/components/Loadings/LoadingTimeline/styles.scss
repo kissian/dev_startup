@@ -1,0 +1,61 @@
+@mixin nth-children($points...) {
+  @each $point in $points {
+      &:nth-child(#{$point}) {
+          @content;
+      }
+  }
+}
+
+
+.LoadingUser {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 214px;
+  border: 1px solid #eee;
+  border-radius: 0;
+  width: 100%;
+  margin-bottom: 30px;
+  .loadingTitle {
+    height: 10px;
+    margin: 10px 0;
+    width: 70%;
+    animation: pulse 1s infinite ease-in-out;
+  }
+  .row {
+    padding: 7px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .loadingCircle {
+      border-radius: 100%;
+      width: 20px; height: 20px;
+      margin: 0 10px;
+      animation: pulse 1s infinite ease-in-out;
+      
+    }
+    .loadingLine {
+      height: 10px;
+      margin: 0 10px;
+      animation: pulse 1s infinite ease-in-out;
+      @include nth-children(1,3,5,7) {
+        width: 20%;
+      }
+      @include nth-children(2,4,6,8) {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+      background-color: rgba(165, 165, 165, 0.1)
+  }
+  50% {
+      background-color: rgba(165, 165, 165, 0.3)
+  }
+  100% {
+      background-color: rgba(165, 165, 165, 0.1)
+  }
+}

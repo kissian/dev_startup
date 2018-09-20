@@ -1,0 +1,97 @@
+#loader-wrapper {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  width: 160px;
+  height: 160px;
+  z-index: 1000;
+  
+  #loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-top-color: #072E5F;
+  
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  
+    z-index: 1001;
+  }
+  
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        border-top-color: #A8075E;
+  
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+    }
+  
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        border-top-color: #B9B707;
+  
+        -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
+    }
+}
+
+
+  @-webkit-keyframes spin {
+      0%   { 
+          -webkit-transform: rotate(0deg); 
+          -ms-transform: rotate(0deg); 
+          transform: rotate(0deg); 
+      }
+      100% {
+          -webkit-transform: rotate(360deg); 
+          -ms-transform: rotate(360deg); 
+          transform: rotate(360deg);
+      }
+  }
+  @keyframes spin {
+      0%   { 
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg); 
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
+  }
+  .loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;  
+            transition: all 0.3s ease-out;
+  }
+  .loaded #loader-wrapper {
+      visibility: hidden;
+
+      -webkit-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+              transform: translateY(-100%);
+
+      -webkit-transition: all 0.3s 1s ease-out;  
+              transition: all 0.3s 1s ease-out;
+  }

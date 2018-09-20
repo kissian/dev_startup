@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingUser component matches snapshot 1`] = `
+<div
+  className="LoadingUser"
+>
+  <div
+    className="loadingTitle"
+  />
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <div
+      className="loadingCircle"
+    />
+    <div
+      className="loadingLine"
+    />
+    <div
+      className="loadingLine"
+    />
+  </Row>
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <div
+      className="loadingCircle"
+    />
+    <div
+      className="loadingLine"
+    />
+    <div
+      className="loadingLine"
+    />
+  </Row>
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <div
+      className="loadingCircle"
+    />
+    <div
+      className="loadingLine"
+    />
+    <div
+      className="loadingLine"
+    />
+  </Row>
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <div
+      className="loadingCircle"
+    />
+    <div
+      className="loadingLine"
+    />
+    <div
+      className="loadingLine"
+    />
+  </Row>
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <div
+      className="loadingCircle"
+    />
+    <div
+      className="loadingLine"
+    />
+    <div
+      className="loadingLine"
+    />
+  </Row>
+</div>
+`;

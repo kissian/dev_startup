@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideCardLoading component matches snapshot 1`] = `
+<Row
+  bsClass="row"
+  className="SideCardLoding"
+  componentClass="div"
+>
+  <div
+    className="loadingLine"
+  />
+  <div>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      xs={6}
+    >
+      <div
+        className="thumbnail loadingBox"
+      />
+    </Col>
+  </div>
+</Row>
+`;

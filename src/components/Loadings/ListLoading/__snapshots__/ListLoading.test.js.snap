@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListLoading component matches snapshot 1`] = `
+<div
+  className="textInputLoading"
+>
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+  <div
+    className="loadingLine"
+  />
+</div>
+`;

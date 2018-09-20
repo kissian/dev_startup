@@ -1,4 +1,7 @@
 import React, { Component, Fragment } from 'react';
+import { Row, Grid } from 'react-bootstrap';
+import './styles.scss';
+
 import SimpleNavbar from 'containers/Navigation';
 import Footer from 'containers/Footer';
 import HomeSlider from 'containers/HomeSlider';
@@ -8,9 +11,11 @@ class MainLayout extends Component {
     return (
       <Fragment>
         <SimpleNavbar />
-        <div>
-          <HomeSlider />
-        </div>
+        <Grid>
+          <Row>
+            <HomeSlider />
+          </Row>
+        </Grid>
         <Footer />
       </Fragment>
     )
