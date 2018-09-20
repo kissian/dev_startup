@@ -2,7 +2,7 @@
   "name": "osiagram",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kissian.github.io/dev_startup",
+  "homepage": "https://kissian.github.io/kissianPopol",
   "dependencies": {
     "@material-ui/core": "^3.1.0",
     "autoprefixer": "7.1.6",

@@ -5,7 +5,7 @@ import Container from './container';
 const mapStateToProps = (state) => {
     const { user, post: { boards } } = state;
     return {
-        user, boards,
+        user, boards
     };
 };
 

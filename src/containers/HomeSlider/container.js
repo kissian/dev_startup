@@ -5,16 +5,9 @@ class Container extends Component {
   constructor(props){
     super(props);
     this.state = {
-      properties: [],
-      property: [],
+      properties: props.properties,
+      property: props.properties[6],
     }
-  }
-  componentWillMount() {
-    const { properties } = this.props;
-    this.setState({
-      properties: properties,
-      property: properties[6]
-    })
   }
   goToNextSlide = () => {
     const { property, properties } = this.state;
@@ -30,6 +23,7 @@ class Container extends Component {
       property: properties[newIndex]
     })
   }
+  
 
   render() {
     const {

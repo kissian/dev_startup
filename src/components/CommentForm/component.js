@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, FormGroup, FormControl } from 'react-bootstrap';
-import './styles.scss';
+import styles from './styles.scss';
 
 const CommentForm = ({
     comment,
     handleChange,
     handleKeyPressed,
 }) => (
-    <form className="add-commit">
+    <form className={styles.addCommit}>
         <FormGroup>
             <Row>
                 <FormControl

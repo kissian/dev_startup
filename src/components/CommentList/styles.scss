@@ -2,29 +2,38 @@
 .comments {
   display: flex;
 
-  .list-unstyled {
+  .listUnstyled {
       
       li{
-        font-size: 12px; line-height: 14px;
-        .hidden-user {
-          font-weight: 700;
+        font-size: 12px; 
+        
+        .commentWrap {
+          padding: 0 12px;
+          height: 27px;
           font-size: 13px;
-          color: black;
+          line-height: 14px;
+          .hiddenUser {
+            color: #bdc7d8;
+            padding: 7px;
+            display: inline-block;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            overflow: hidden;
+          }
+          .hiddenText{
+            padding: 7px;
+            display: inline-block;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            color: #222;
+            overflow: hidden;
+  
+          }
         }
-        .hidden-text{
+        .hiddenBox {
           padding: 7px;
-          display: inline-block;
-          text-overflow: ellipsis;
-          word-wrap: break-word;
-          white-space: pre-wrap;
-          color: #999;
-          overflow: hidden;
-
-        }
-        .hidden-box {
-          padding: 10px;
-          border-radius: 2px;
-          background-color: #f9f9f9;
           color: #111;
         }
       }

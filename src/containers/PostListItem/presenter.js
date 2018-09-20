@@ -6,12 +6,14 @@ import CommentForm from 'components/CommentForm';
 import CommentList from 'components/CommentList';
 
 import ActionBtn from 'components/VisiblePostActionBtn';
-import TImelineItem from 'components/TimelineItem';
+import TimelineItem from 'components/TimelineItem';
 import styles from './styles.scss';
 
 const PostListItem = ({
+    user,
     id,
     like,
+    open,
     showComment,
     title,
     date,
@@ -25,9 +27,10 @@ const PostListItem = ({
     onRemovePost,
     onToggleLike,
     onToggleComment,
+    showToggleMenu,
 }) => (
     <Col lg={12} key={id} className={styles.itemInner}>
-        <TImelineItem
+        <TimelineItem
             onRemovePost={onRemovePost(id)}
             nickname={nickname}
             profileImage={profileImage}
@@ -37,6 +40,8 @@ const PostListItem = ({
             whether={whether}
             comments={comments}
             likeCount={likeCount}
+            open={open}
+            showToggleMenu={showToggleMenu}
         />
         <ActionBtn
             like={like}
@@ -53,6 +58,7 @@ const PostListItem = ({
                         </Col>
                         <Col lg={12}>
                             <CommentForm
+                                user={user}
                                 onAddComment={onAddComment(id)}
                                 nickname={nickname}
                             />
@@ -68,7 +74,9 @@ PostListItem.defaultProps = {
 };
 
 PostListItem.propTypes = {
-    id: PropTypes.string.isRequired,
+    user: PropTypes.object.isRequired,
+    _id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     nickname: PropTypes.string.isRequired,
     profileImage: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -77,11 +85,13 @@ PostListItem.propTypes = {
     date: PropTypes.string.isRequired,
     showComment: PropTypes.bool,
     like: PropTypes.bool.isRequired,
+    open: PropTypes.bool.isRequired,
     likeCount: PropTypes.number.isRequired,
     comments: PropTypes.arrayOf(PropTypes.object).isRequired,
     onAddComment: PropTypes.func.isRequired,
     onRemovePost: PropTypes.func.isRequired,
     onToggleLike: PropTypes.func.isRequired,
     onToggleComment: PropTypes.func.isRequired,
+    showToggleMenu: PropTypes.func.isRequired,
 };
 export default PostListItem;

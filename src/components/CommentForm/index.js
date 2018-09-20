@@ -16,7 +16,7 @@ class Container extends Component {
     }
 
     handleKeyPressed = (e) => {
-        const { onAddComment, nickname } = this.props;
+        const { onAddComment, user: { profile: { nickname } } } = this.props;
         const { comment } = this.state;
         const { key } = e;
         const date = moment().format('YYYY-MM-DDTHH:mm:ssZ');

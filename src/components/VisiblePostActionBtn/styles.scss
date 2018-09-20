@@ -1,9 +1,15 @@
 .bordBody {
   border-top: 1px solid #eee;
   margin-top: 10px;
-  .btn-group.actionBtnGroup {
+  padding-top: 10px;
+  .actionBtnGroup {
     button.actionBtn {
-      border: 0 !important;
+      border: 0;
+      border-radius: 100%;
+      padding: 8px 12px;
+      &:hover {
+        background-color: #fff;
+      }
     }
   }
 }

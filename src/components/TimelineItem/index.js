@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { DropdownButton, MenuItem } from 'react-bootstrap';
+import { IconButton, Button } from '@material-ui/core';
 import Moment from 'components/Moment';
 import styles from './styles.scss';
 
@@ -13,7 +13,9 @@ const TimelineItem = ({
     history,
     profileImage,
     onRemovePost,
+    showToggleMenu,
     likeCount,
+    open,
 }) => (
     <div className={styles.flexColumn}>
         <div className={styles.flexRowCenter}>
@@ -25,20 +27,27 @@ const TimelineItem = ({
                     <h4 style={{ flex: '1 1 0' }}>
                         {nickname}
                     </h4>
-                    <DropdownButton title={<i className="fas fa-cog" />} id="bg-justified-dropdown">
-                        <MenuItem eventKey="1" onClick={onRemovePost}>
-                  게시물삭제
-                        </MenuItem>
-                        <MenuItem eventKey="2">
-                  비공개
-                        </MenuItem>
-                    </DropdownButton>
+                    <div className={styles.toggleWrap}>
+                        <IconButton 
+                            aria-label="square"
+                            onClick={showToggleMenu}
+                        >
+                            <i className="fas fa-ellipsis-h" style={{fontSize: '12px'}}></i>
+                        </IconButton>
+                        {
+                            open ? (
+                                <div className={styles.toggleMenuWrap}>
+                                    <Button type="button">비공개</Button>
+                                    <Button type="button" onClick={onRemovePost}>삭제</Button>
+                                </div>
+                            ) : null
+                        }
+                       
+                    </div>
                 </div>
                 <div className={styles.flexRowCenter}>
                     <div style={{ flex: '1 1 0' }}>
-                        <span
-                            className="list-group-item-text text-nowrap-ellipsis"
-                        >
+                        <span>
                             {whether}
                             {' '}
                             <Moment date={date} />
@@ -48,13 +57,13 @@ const TimelineItem = ({
             </div>
         </div>
         <div style={{ marginTop: 6, flex: '1 1 0' }}>
-            <span style={{ fontSize: 21, fontWeight: 400 }}>
+            <span className={styles.textsSpace}>
                 {title}
             </span>
         </div>
         <div style={{ marginTop: 6 }}>
             {
-                history ? <img className="img-responsive" src={history} alt="..." /> : null
+                history ? <img className="img-responsive" src={history} alt={history} /> : null
             }
         </div>
         <div style={{ marginTop: 6 }}>
@@ -88,7 +97,9 @@ TimelineItem.propTypes = {
     history: PropTypes.string.isRequired,
     profileImage: PropTypes.string.isRequired,
     onRemovePost: PropTypes.func.isRequired,
+    showToggleMenu: PropTypes.func.isRequired,
     likeCount: PropTypes.number.isRequired,
+    open: PropTypes.bool.isRequired,
 };
 
 export default TimelineItem;

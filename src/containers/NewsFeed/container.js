@@ -12,7 +12,7 @@ class Container extends Component {
             history: '',
             whether: '전체공개',
             loading: true,
-            boards: []
+            boards: [],
         };
     }
     componentDidMount() {
@@ -26,13 +26,13 @@ class Container extends Component {
         }, 3000);
     }
 
-    // componentWillReceiveProps(nextProps) {
-    //     console.log(nextProps);
-    //     const { boards } = nextProps;
-    //     this.setState({
-    //         boards,
-    //     });
-    // }
+    componentWillReceiveProps(nextProps) {
+        const { boards } = nextProps;
+        console.log(boards)
+        this.setState({
+            boards,
+        });
+    }
     
     
     handleChange = (e) => {
@@ -48,10 +48,8 @@ class Container extends Component {
             history: url,
         });
     }
-
     // event.diff(start)
     handleSubmit = (e) => {
-        e.preventDefault();
         const { user: { _id, profile: { nickname, profileImage } }, createBoard } = this.props;
         const { title, history, whether } = this.state;
         const date = moment().format('YYYY-MM-DDTHH:mm:ssZ');
@@ -80,6 +78,7 @@ class Container extends Component {
             whether: '전체공개',
             title: '',
         });
+        e.preventDefault();
     };
 
     render() {
@@ -94,7 +93,6 @@ class Container extends Component {
             handleFileChange,
             handleSubmit,
         } = this;
-        console.log(boards)
         if (loading) return <LoadingTimeline />;
         return (
             <NewsFeed

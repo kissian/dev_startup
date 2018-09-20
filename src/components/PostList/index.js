@@ -6,15 +6,16 @@ import PostListItem from './presenter';
 class Container extends Component {
     state = {
         loading: true,
-        slice: 10,
+        slice: 3,
         boards: [],
     }
 
     componentDidMount() {
         const { boards } = this.props;
+        const { loading } = this.state;
         this.setState({
             boards,
-            loading: false,
+            loading: !loading,
         });
     }
 
@@ -25,27 +26,6 @@ class Container extends Component {
             loading: false,
         });
     }
-
-    // static getDerivedStateFromProps(props, state) {
-    //     return {
-    //         boards: props.boards.slice(0, state.slice),
-    //     };
-    // }
-    // componentDidUpdate(prevProps, prevState) {
-    //     // const { boards } = prevProps;
-    //     // const { slice } = prevState;
-    //     // this.setState({
-    //     //     boards: boards.slice(0, slice),
-    //     //     loading: false,
-    //     // });
-    //     const { boards } = prevProps;
-    //     const { slice } = prevState;
-    //     this.setState({
-    //         boards
-    //     })
-    //     console.log('prevProps',prevProps, 'this.props',this.props, 'prevState',prevState);
-    //     console.log(boards, slice)
-    // }
 
     updateBoards = () => {
         const { boards } = this.props;
@@ -62,7 +42,7 @@ class Container extends Component {
 
         if (!loading) {
             this.setState({
-                slice: slice + 10,
+                slice: slice + 3,
                 loading: true,
             });
             setTimeout(() => this.updateBoards(), 1000);

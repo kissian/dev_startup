@@ -1,31 +1,36 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Col, Button, ButtonGroup } from 'react-bootstrap';
+import IconButton from '@material-ui/core/IconButton';
 import styles from './styles.scss';
 
 class VisiblePostActionBtn extends Component {
     render() {
         const {
-            like, showComment, onToggleLike, onToggleComment,
+            like, showComment, onToggleLike, onToggleComment, classes
         } = this.props;
+
         return (
-            <Col lg={12} className={styles.bordBody}>
-                <ButtonGroup className={styles.actionBtnGroup}>
-                    <Button className={styles.actionBtn} onClick={onToggleLike}>
-                        {
-                            like ? <i className="fas fa-heart" style={{ color: 'red' }} /> : <i className="far fa-heart" />
-                        }
-                    </Button>
-                    <Button className={styles.actionBtn} onClick={onToggleComment}>
-                        {
-                            showComment ? <i className="fas fa-comment" /> : <i className="far fa-comment" />
-                        }
-                    </Button>
-                    <Button className={styles.actionBtn}>
-                        <i className="far fa-share-square" />
-                    </Button>
-                </ButtonGroup>
-            </Col>
+            <div className={styles.bordBody}>
+                <IconButton 
+                    aria-label="heart"
+                    onClick={onToggleLike}>
+                    {
+                        like ? <i className="fas fa-heart" style={{ color: 'red' }} /> : <i className="far fa-heart" />
+                    }
+                </IconButton>
+                <IconButton 
+                    aria-label="comment"
+                    onClick={onToggleComment}>
+                    {
+                        showComment ? <i className="fas fa-comment" /> : <i className="far fa-comment" />
+                    }
+                </IconButton>
+                <IconButton 
+                    aria-label="square"
+                >
+                    <i className="far fa-share-square" />
+                </IconButton>
+            </div>
         );
     }
 }

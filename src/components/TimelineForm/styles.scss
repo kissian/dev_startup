@@ -8,4 +8,36 @@
       border-bottom: 1px solid #eee; height: 100px; box-shadow: none;
     }
   }
+  select.selectorWrap {
+    // -webkit-appearance: none; /* 네이티브 외형 감추기 */ 
+    // -moz-appearance: none; 
+    // appearance: none;
+    // background: url("http://mblogthumb2.phinf.naver.net/MjAxNzA1MDdfMTIz/MDAxNDk0MTMwNTMzNTA2.iIDQRX6KWM6TKYlaZWu8NdywKlfuHprnDGAyQ122wfUg.rp5B0z016niQSLIITlxxwTH5fNm_DBPg705bl7I1snUg.PNG.wisestone77/1406226234_f077.png?type=w800") no-repeat 8px auto; 
+    width: 120px;
+    // border: 1px solid #999;
+    // border-radius: 0px; /* iOS 둥근모서리 제거 */
+    // -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+  }
+  // .selectorWrap::-ms-expand { display: none; }
+  .notifyItem {
+    display: flex;
+    flex-direction: row;
+    .notifyFirst {
+      width: 10%;
+    }
+    .notifyMiddle {
+      width: 70%;
+      font-size: 13px;
+    }
+    .notifyLast {
+      width: 20%;
+      font-size: 15px;
+      button {
+        width: 100%;
+        background-color: #c5cae9;
+        height: 34px;
+      }
+    }
+  }
 }

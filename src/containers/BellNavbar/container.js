@@ -6,7 +6,6 @@ class Container extends Component {
     
     render() {
         const { user: { isLoggedIn }, logout } = this.props;
-        console.log(this.props.user);
         return (
             <Navigation 
                 isLoggedIn={isLoggedIn}

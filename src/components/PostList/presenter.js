@@ -27,7 +27,8 @@ const PostList = ({
             }) => (
                 <PostListItem
                     key={index}
-                    id={_id}
+                    _id={_id}
+                    id={index}
                     nickname={nickname}
                     profileImage={profileImage}
                     date={date}

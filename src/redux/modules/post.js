@@ -9,7 +9,6 @@ const TOGGLE_BOARD_LIKE = 'post/TOGGLE_BOARD_LIKE';
 const TOGGLE_BOARD_COMMENT = 'post/TOGGLE_BOARD_COMMENT';
 const ADD_BOARD_COMMENT = 'post/ADD_BOARD_COMMENT';
 
-
 // action creators
 function createBoard(
   _id,
@@ -71,7 +70,7 @@ const removePost = id => ({
 
 // initial state
 const initialState = {
-  boards: [...fakeBoards]
+  boards: [...fakeBoards],
 }
 // reducer
 function reducer(state = initialState, action) {
@@ -131,24 +130,22 @@ function applyCreateBoard(state, payload) {
       comments,
     }, ...state.boards
   ]
-  state.boards = updateBoards
-  return state;
+  return { state, boards: updateBoards};
 }
 
 function applyRemoveBoard(state, payload) {
   const { boards } = state;
   return {
     ...state,
-    boards: boards.filter(({ _id }) => _id !== payload),
+    boards: boards.filter(({ index }) => index !== payload),
   }
 };
 
 function applyToggleLikeBoard(state, payload) {
-  const { postId } = payload;
   const updatedState = { ...state };
   const { boards } = state;
   const newBoard = boards.map((board) => {
-      if (board._id === postId) {
+      if (board.index === payload) {
           const updatedBoard = { ...board };
           updatedBoard.like = !board.like;
           updatedBoard.likeCount = board.likeCount + (board.like ? -1 : 1);
@@ -161,10 +158,9 @@ function applyToggleLikeBoard(state, payload) {
 };
 
 function applyToggleCommentBoard(state, payload) {
-  const { postId } = payload;
   const { boards } = state;
   const newBoard = boards.map((board) => {
-      if (board._id === postId) {
+      if (board.index === payload) {
           return { ...board, showComment: !board.showComment };
       }
       return board;
@@ -181,16 +177,17 @@ function applyCreateBoardComment(state, payload) {
   } = payload;
   const { boards } = state;
   const newBoardComment = boards.map((board) => {
-      if (board._id === id) {
+      if (board.index === id) {
           return {
               // id를 추가해야함
               ...board,
               comments: [
                   ...board.comments,
                   {
-                      name,
-                      comment,
-                      date,
+                    id: board.comments.length,
+                    name,
+                    comment,
+                    date,
                   },
               ],
           };
@@ -206,7 +203,7 @@ const actionCreators = {
   removePost,
   togglePostLike,
   togglePostComment,
-  addComment
+  addComment,
 }
 
 export { actionCreators };

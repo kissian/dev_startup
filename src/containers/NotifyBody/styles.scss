@@ -1,9 +1,26 @@
 .notifyBody {
-  width: 300px; max-height: 500px;
+  width: 450px; max-height: 500px;
   padding: 12px;
   border: 1px solid #eee;
   background-color: #fff;
   position: absolute;
   top: 33px; right: 0;
   z-index: 10;
+  .notifyItem {
+    display: flex;
+    flex-direction: row;
+    line-height: 42px;
+    border-bottom: 1px solid #eee;
+    .notifyFirst {
+      width: 10%;
+    }
+    .notifyMiddle {
+      width: 70%;
+      font-size: 13px;
+    }
+    .notifyLast {
+      width: 20%;
+      font-size: 12px;
+    }
+  }
 }

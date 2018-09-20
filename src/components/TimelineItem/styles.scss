@@ -1,8 +1,7 @@
 .flexColumn {
-  padding: 15px;
   display: flex;
   flex-direction: column;
-  height: 414px;
+  // height: 414px;
   width: 100%;
   margin-bottom: 30px;
   .flexRowCenter {
@@ -12,9 +11,28 @@
     h4 {
       font-size: 21px;
     }
-    span {
+    .textsSpace {
       word-wrap: break-word;
       white-space: pre-wrap;
+      font-size: 20px;
+    }
+    .toggleWrap {
+      position: relative;
+      .toggleMenuWrap {
+        border: 1px solid #eee;
+        background-color: #fff;
+        width: 90px;
+        position: absolute;
+        right: 0;
+      }
+      button {
+        padding: 9px;
+        width: 100%;
+        border-radius: 0;
+        &:hover {
+          background-color: #eee;
+        }
+      }
     }
   }
   

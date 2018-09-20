@@ -1,6 +1,13 @@
 .addCommit {
+  padding: 0 12px;
   textarea {
-    border: none; margin-bottom: 30px;
-    border-bottom: 1px solid #eee; height: 50px; box-shadow: none;
+    margin-bottom: 30px;
+    border: 1px solid #aaa; 
+    height:27px; 
+    box-shadow: none;
+    background-color: #f2f3f5;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 70px;
   }
 }
